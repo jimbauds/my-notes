@@ -2,6 +2,7 @@
 
 ### Basic Commands
 ```shell
+rvm current #=> Show current ruby version
 rvm install 1.9.3 #=> Install ruby version 1.9.3
 rvm use 2.1.2 #=> Use ruby version 2.1.2
 rvm gemset create <gemset_name> #=> Create a new gemset
