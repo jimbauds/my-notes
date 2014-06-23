@@ -3,7 +3,7 @@
 
 ### Software:
 [RVM](software/rvm.md)
-
+[gem](software/gem.md)
 ---
 
 ### Installation from source:
