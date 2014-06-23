@@ -1,6 +1,6 @@
 # RVM Commands
 
-## Basic Commands
+### Basic Commands
 ```shell
 rvm install 1.9.3 #=> Install ruby version 1.9.3
 rvm use 2.1.2 #=> Use ruby version 2.1.2
