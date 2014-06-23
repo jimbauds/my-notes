@@ -1,4 +1,5 @@
-# git-2.0.0 Installation from source
+# git-2.0.0 
+## Installation from source with documentation
 
 ### Prerequisite installation: gettext
 ```shell
