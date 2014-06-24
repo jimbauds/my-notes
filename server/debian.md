@@ -17,7 +17,7 @@ visudo
 nano /etc/ssh/sshd_config
 
 # Change port number
-  - Port <portnumber>
+  - Port <port_number>
 
 # Remove the root login
   - PermitRootLogin no
