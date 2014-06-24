@@ -36,7 +36,6 @@ sudo docker ps -a
 sudo docker commit -m "MyImage" <ID> <NewName>
 ```
 
-```
 ### Save an image to a tar archive:
 ```shell
 sudo docker save busybox > busybox.tar
