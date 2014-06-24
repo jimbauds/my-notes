@@ -1,5 +1,5 @@
 # git-2.0.0 
-## Installation from source with documentation
+## Installation from source with documentation (Debian)
 
 ### Prerequisite installation: gettext
 ```shell
