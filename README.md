@@ -1,5 +1,8 @@
 # My notes:
 
+### On => Building servers
+* [debian](server/debian.md)
+
 ### On => Softwares:
 * [linux](software/linux.md)
 * [docker](software/docker.md)
