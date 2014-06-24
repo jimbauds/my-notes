@@ -4,10 +4,10 @@
 ssh root@<server>
 
 # Change root password
-passwd #=> Change password
+passwd
 
 # Add new user for ssh access
-adduser <username> #=> Add new user
+adduser <username>
 
 # Give new user sudo right
 visudo #=> Open sudo config file and add new user rights
