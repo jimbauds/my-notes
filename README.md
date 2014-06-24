@@ -1,6 +1,6 @@
 # My notes:
 
-### On => Building servers
+### On => Building servers:
 * [debian](server/debian.md)
 
 ### On => Softwares:
