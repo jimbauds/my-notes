@@ -42,6 +42,7 @@ service ssh restart
 ### **IMPORTANT**
 **TEST THE CONNECTION BEFORE EXIT**
 ```shell
+# Open a new terminal
 ssh -p <port_number> <username>@<server>
 sudo apt-get update #=> This should work!
 ```
