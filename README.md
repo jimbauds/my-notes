@@ -1,6 +1,6 @@
 # My notes:
 
-### Software:
+### Softwares:
 * [rvm](software/rvm.md)
 * [gem](software/gem.md)
 * [git](software/git.md)
