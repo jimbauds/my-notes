@@ -29,7 +29,7 @@ Check with this command (simulation):
 ```shell
 apt-get -sV install xmlto
 ```
-Install with this command
+Install with this command:
 ```shell
 sudo apt-get install xmlto
 ```
