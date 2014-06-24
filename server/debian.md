@@ -10,7 +10,7 @@ passwd
 adduser <username>
 
 # Give new user sudo right
-visudo #=> Open sudo config file and add new user rights
+visudo
   - <username> ALL=(ALL:ALL) ALL
 
 # Edit the ssh config file
