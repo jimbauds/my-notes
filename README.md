@@ -1,7 +1,7 @@
 # My notes:
 
 ### Software:
-* [RVM](software/rvm.md)
+* [rvm](software/rvm.md)
 * [gem](software/gem.md)
 * [git](software/git.md)
 * [rails](software/rails.md)
