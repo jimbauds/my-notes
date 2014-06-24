@@ -1,6 +1,7 @@
-# git commands
+# Git Commands
 
+### How to Put a Bare Repository to a Remote Server
 ```shell
-git clone --bare my_project my_project.git
-scp -r my_project.git user@git.example.com:/opt/git
+git clone --bare my_project my_project.git #=> Clone the Project into a Bare Repository
+scp -r my_project.git user@server:/opt/git #=> Put the Bare Repository on a Server
 ```
