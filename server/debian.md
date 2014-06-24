@@ -39,8 +39,8 @@ vi /home/<username>/.ssh/authorized_keys
 # Restart the ssh service
 service ssh restart
 ```
-### *IMPORTANT*
-*TEST THE CONNECTION BEFORE EXIT*
+### **IMPORTANT**
+**TEST THE CONNECTION BEFORE EXIT**
 ```shell
 ssh -p <port_number> <username>@<server>
 sudo apt-get update #=> This should work!
