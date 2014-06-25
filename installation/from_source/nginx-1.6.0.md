@@ -1,6 +1,6 @@
 # Nginx: Installation from source (Debian 7 Wheezy)
 
-### (Optional) Docker container creation:
+### Docker container creation(Optional):
 
 You can run the server into a docker container for isolation purpose. If you don't know what docker is all
 about, take a look at [docker.io](http://docker.io).
