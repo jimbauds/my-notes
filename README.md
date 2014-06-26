@@ -23,6 +23,7 @@ software.
 * [Linux](software/linux.md)  
   To become a better programmer, I was in need of learning Linux. Those are basic
   command that you can use under Linux for various things.
+  ****
 
 * [Docker](software/docker.md)  
   Docker is a Linux container engine. From the [docker.io](http://docker.io) website, Docker is an open platform for distributed applications for developers and sysadmins. You can take a look at my notes on Docker with this file.
