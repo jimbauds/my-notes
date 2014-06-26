@@ -7,16 +7,12 @@ Those are my notes! Happy Reading!
 P.S. Sorry if sometimes you don't understand them. I rewrite my notes when I have
 time and put comments on it. But, you have to understand that this is for me.
 
-*****
-
 ### On => Building servers:
 In this part, you can find my notes on building servers. I build servers
 for my development needs.
 
 * [Debian 7.5 Wheezy](server/debian-7.5.md)  
-  This is the notes I use to put up a new Debian server with ssh already installed.  
-
-*****
+  This is the notes I use to put up a new Debian server with ssh already installed.
 
 ### On => Softwares:
 Here is a list of notes I take on various software. Those are usually terminal
@@ -41,8 +37,6 @@ software.
 * [Rails](software/rails.md)  
   From the [rubyonrails.org](http://rubyonrails.org) website, Ruby on Rails is an open-source web framework that's optimized for programmer happiness and sustainable productivity. I use Rails to develop web app.
 
-*****
-
 ### On => Installation from source (Debian):
 In this section of the document, you're going to find my notes on Software Installation from source generally under Linux.
 
@@ -54,5 +48,3 @@ In this section of the document, you're going to find my notes on Software Insta
 
 * [httpd-2.4.9 from Apache](installation/from_source/apache2.4.md)  
   A short description for httpd can be, a web server. I use httpd from time to time to serve static assets. You can find more about httpd at this address => [httpd.apache.org](http://httpd.apache.org/).
-
-*****
