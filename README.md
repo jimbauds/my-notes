@@ -15,6 +15,7 @@ for my development needs.
 
 * [Debian 7.5 Wheezy](server/debian-7.5.md)  
   This is the notes I use to put up a new Debian server with ssh already installed.
+  ****
 
 ### On => Softwares:
 Here is a list of notes I take on various software. Those are usually terminal
@@ -27,9 +28,11 @@ software.
 
 * [Docker](software/docker.md)  
   Docker is a Linux container engine. From the [docker.io](http://docker.io) website, Docker is an open platform for distributed applications for developers and sysadmins. You can take a look at my notes on Docker with this file.
+  ****
 
 * [Git](software/git.md)  
   From the [git-scm.com](http://git-scm.com) website, Git is a free and open source distributed version control system. I use Git for almost everything. This small piece of software is used all around the world by all sorts of people. 
+  ****
 
 * [RVM](software/rvm.md)  
   When I work with Ruby, I use RVM has my Ruby Version Manager (RVM). From the [rvm.io](http://rvm.io) website, RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.
