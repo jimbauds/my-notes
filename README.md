@@ -7,8 +7,7 @@ Those are my notes! Happy Reading!
 P.S. Sorry if sometimes you don't understand them. I rewrite my notes when I have
 time and put comments on it. But, you have to understand that this is for me.
 
-```
-```
+<hr />
 
 ### On => Building servers:
 In this part, you can find my notes on building servers. I build servers
