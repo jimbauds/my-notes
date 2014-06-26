@@ -14,7 +14,8 @@ for my development needs.
 
 * [Debian 7.5 Wheezy](server/debian-7.5.md)  
   This is the notes I use to put up a new Debian server with ssh already installed.  
-  ******
+
+  ****
 
 ### On => Softwares:
 Here is a list of notes I take on various software. Those are usually terminal
