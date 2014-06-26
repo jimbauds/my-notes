@@ -13,8 +13,8 @@ In this part, you can find my notes on building servers. I build servers
 for my development needs.
 
 * [Debian 7.5 Wheezy](server/debian-7.5.md)  
-  This is the notes I use to put up a new Debian server.  
-  SSH must already be set up.  
+  This is the notes I use to put up a new Debian server. SSH must already be set up.
+  
   ****
 
 ### On => Softwares:
