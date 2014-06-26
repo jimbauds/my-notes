@@ -8,7 +8,6 @@ P.S. Sorry if sometimes you don't understand them. I rewrite my notes when I hav
 time and put comments on it. But, you have to understand that this is for me.
 
 ```
-
 ```
 
 ### On => Building servers:
