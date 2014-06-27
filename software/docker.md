@@ -1,6 +1,6 @@
 # Docker
 
-### Installation (Ubuntu) 64bits
+### Installation (Debian/Ubuntu) 64bits
 ```shell
 echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
@@ -50,4 +50,17 @@ sudo docker load --input fedora.tar
 ### Export the contents of a filesystem as a tar archive to STDOUT:
 ```
 sudo docker export red_panda > latest.tar
+```
+
+To detach the tty without exiting the shell, use the escape sequence Ctrl-p + Ctrl-q
+
+
+### Volumes
+```shell
+sudo docker run -it -v /$(pwd)/<host_folder>:/<container_folder> debian bash
+docker run -d -v /dbdata --name dbdata training/postgres
+docker run -d --volumes-from dbdata --name db1 training/postgres
+docker run -d --volumes-from dbdata --name db2 training/postgres
+docker run -d --name db3 --volumes-from db1 training/postgres
+sudo docker run --volumes-from dbdata -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata
 ```
