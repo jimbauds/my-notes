@@ -3,6 +3,7 @@
 ### Basic Commands
 ```shell
 ln -s /path/to/file /path/to/symlink #=> make symbolic link
+sudo apt-cache search <package_name>
 ```
 
 ### Debian
