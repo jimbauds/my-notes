@@ -52,9 +52,6 @@ sudo docker load --input fedora.tar
 sudo docker export red_panda > latest.tar
 ```
 
-To detach the tty without exiting the shell, use the escape sequence Ctrl-p + Ctrl-q
-
-
 ### Volumes
 ```shell
 sudo docker run -it -v /$(pwd)/<host_folder>:/<container_folder> debian bash
@@ -64,3 +61,5 @@ docker run -d --volumes-from dbdata --name db2 training/postgres
 docker run -d --name db3 --volumes-from db1 training/postgres
 sudo docker run --volumes-from dbdata -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata
 ```
+### Extras:
+To detach the tty without exiting the shell, use the escape sequence Ctrl-p + Ctrl-q
