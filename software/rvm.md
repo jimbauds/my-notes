@@ -2,6 +2,7 @@
 
 ### Basic Commands
 ```shell
+rvm get stable #=> Upgrade RVM to the most stable version
 rvm current #=> Show current ruby version
 rvm gemdir #=> list the full directory path for the current gemset
 
