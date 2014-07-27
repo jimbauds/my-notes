@@ -10,6 +10,7 @@ sudo apt-cache search <package_name>
 ```shell
 netstat -an | grep ESTABLISHED #=> Show established internet connections
 netstat -natp
+ps auxf
 
 # Execute command at boot
 /etc/rc.local
