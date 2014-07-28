@@ -10,7 +10,6 @@ sudo apt-cache search <package_name>
 ```shell
 netstat -an | grep ESTABLISHED #=> Show established internet connections
 netstat -natp
-ps auxf => Show running processes
 
 # Execute command at boot
 /etc/rc.local
@@ -21,6 +20,7 @@ ps auxf => Show running processes
 lsb_release -a #=> Show OS Version
 netstat -nlutp #=> Show Listening Ports (Udp/Tcp)
 curl -I http://example.com => Get Header
+ps auxf => Show running processes
 ```
 
 ### RedHat
