@@ -82,12 +82,12 @@ sudo iptables -P INPUT DROP
 
 ## Storing iptables rules in a file
 
-**Create the file**
+###Create the file
 ```sh
 editor /etc/iptables.test.rules
 ```
 
-**Enter rules**
+###Enter rules
 ```sh
 *filter
 
