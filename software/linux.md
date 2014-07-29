@@ -1,5 +1,10 @@
 # Linux Commands
 
+## Kernel Upgrade
+```sh
+
+```
+
 ### Basic Commands
 ```shell
 ln -s /path/to/file /path/to/symlink #=> make symbolic link
