@@ -1,5 +1,5 @@
 ### Initial Server Configuration:
-```shell
+```sh
 # Connect to the server
 ssh root@<server>
 
@@ -41,7 +41,7 @@ service ssh restart
 ```
 ### **IMPORTANT**
 **TEST THE CONNECTION BEFORE EXIT**
-```shell
+```sh
 # Open a new terminal
 ssh -p <port_number> <username>@<server>
 sudo apt-get update #=> This should work!
@@ -65,15 +65,15 @@ sudo iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
 # Allow localhost connection
 sudo iptables -A INPUT -i lo -j ACCEPT
 
+# Allow outgoing connections
+sudo iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
 # Allow web server traffic
 sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 
 # Allow SSH connection from an IP Address
 sudo iptables -A INPUT -p tcp -s YOUR_IP_ADDRESS -m tcp --dport 22 -j ACCEPT
-
-# Allow outgoing connections
-sudo iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
 # Block everything else, Allow all outgoing connections
 sudo iptables -P OUTPUT ACCEPT
