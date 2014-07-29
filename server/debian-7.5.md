@@ -144,7 +144,7 @@ sudo service iptables-persistent start
 /var/log/ 
 /var/log/kern.log
 ```
-### Dispatch log usign rsyslog
+### Dispatch log using rsyslog
 ```sh
 sudo nano /etc/rsyslog.d/my_iptables.conf
 
