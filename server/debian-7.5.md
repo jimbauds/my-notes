@@ -1,4 +1,4 @@
-### Initial Server Configuration:
+# Initial Server Configuration
 ```sh
 # Connect to the server
 ssh root@<server>
