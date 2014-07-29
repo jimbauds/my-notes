@@ -123,8 +123,21 @@ editor /etc/iptables.test.rules
 
 COMMIT
 ```
-
-
+### Activate the rules
+```sh
+sudo iptables-restore < /etc/iptables.test.rules
+```
+### Save the new rules to the master iptables file
+```sh
+su
+iptables-save > /etc/iptables.up.rules
+editor /etc/network/if-pre-up.d/iptables
+  #!/bin/sh
+  /sbin/iptables-restore < /etc/iptables.up.rules
+chmod +x /etc/network/if-pre-up.d/iptables
+sudo apt-get install iptables-persistent
+sudo service iptables-persistent start
+```
 
 
 
