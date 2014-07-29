@@ -1,7 +1,23 @@
 # Linux Commands
 
-## Kernel Upgrade
+## Kernel Upgrade (official)
 ```sh
+# Show kernel version
+uname -r
+
+# Show available kernel images
+apt-cache search linux-image
+
+# Install kernel
+sudo apt-get install linux-image-x.x.x-xx
+```
+
+## Kernel Upgrade (not-official)
+```sh
+# Add Debian backports
+sudo vim /etc/apt/sources.list
+  deb http://http.debian.net/debian wheezy-backports main
+  
 
 ```
 
@@ -9,6 +25,9 @@
 ```shell
 ln -s /path/to/file /path/to/symlink #=> make symbolic link
 sudo apt-cache search <package_name>
+
+# Shutdown VPS
+sudo shutdown –h now
 ```
 
 ### Debian
