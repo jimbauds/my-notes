@@ -47,7 +47,7 @@ service sshd restart
 ```sh
 # Open a new terminal
 ssh -p <port_number> <username>@<server>
-sudo apt-get update #=> This should work!
+sudo yum update #=> This should work!
 ```
 # Firewall Installation (Iptables)
 ```sh
