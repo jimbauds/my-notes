@@ -14,7 +14,7 @@ for my development needs.
 * [Debian 7.5 Wheezy](server/debian-7.5.md)  
   This is the notes I use to put up a new Debian server. SSH must already be set up.
 
-* [CentoOS 7.0](server/centos-7.0.md)  
+* [CentOS 7.0](server/centos-7.0.md)  
   This is the notes I use to put up a new CentOS server. SSH must already be set up.
   
   ****
