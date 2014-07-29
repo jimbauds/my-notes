@@ -78,8 +78,17 @@ sudo iptables -A INPUT -p tcp -s YOUR_IP_ADDRESS -m tcp --dport 22 -j ACCEPT
 # Block everything else, Allow all outgoing connections
 sudo iptables -P OUTPUT ACCEPT
 sudo iptables -P INPUT DROP
+```
 
+## Storing iptables rules in a file
 
+### Create the file
+```sh
+editor /etc/iptables.test.rules
+```
+
+### Enter rules
+```sh
 *filter
 
 # Allows all loopback (lo0) traffic and drop all traffic to 127/8 that doesn't use lo0
@@ -100,12 +109,10 @@ sudo iptables -P INPUT DROP
 # Allows SSH connections 
 # THE -dport NUMBER IS THE SAME ONE YOU SET UP IN THE SSHD_CONFIG FILE
 -A INPUT -p tcp -m state --state NEW --dport 30000 -j ACCEPT
-
-# Now you should read up on iptables rules and consider whether ssh access 
-# for everyone is really desired. Most likely you will only allow access from certain IPs.
+#-A INPUT -p tcp -s YOUR_IP_ADDRESS -m tcp --dport 22 -j ACCEPT
 
 # Allow ping
--A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
+#-A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
 
 # log iptables denied calls (access via 'dmesg' command)
 -A INPUT -m limit --limit 5/min -j LOG --log-prefix "iptables denied: " --log-level 7
