@@ -29,6 +29,10 @@ software.
   Docker is a Linux container engine. From the [docker.io](http://docker.io) website, Docker is an open platform for distributed applications for developers and sysadmins. You can take a look at my notes on Docker with this file.
   ****
 
+* [Nginx](software/nginx.md)  
+  The NGINX server
+  ****
+
 * [Git](software/git.md)  
   From the [git-scm.com](http://git-scm.com) website, Git is a free and open source distributed version control system. I use Git for almost everything. This small piece of software is used all around the world by all sorts of people. 
   ****
