@@ -138,9 +138,18 @@ chmod +x /etc/network/if-pre-up.d/iptables
 sudo apt-get install iptables-persistent
 sudo service iptables-persistent start
 ```
+## Log files
+### Default location
+```sh
+/var/log/ /var/log/kern.log
 
+```
+### Dispatch log usign rsyslog
+```sh
+sudo nano /etc/rsyslog.d/my_iptables.conf
 
-
+:msg,contains,"iptables denied: " /var/log/iptables.log
+```
 
 
 
