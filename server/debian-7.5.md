@@ -141,8 +141,8 @@ sudo service iptables-persistent start
 ## Log files
 ### Default location
 ```sh
-/var/log/ /var/log/kern.log
-
+/var/log/ 
+/var/log/kern.log
 ```
 ### Dispatch log usign rsyslog
 ```sh
