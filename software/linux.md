@@ -30,6 +30,7 @@ sudo yum search <package_name>
 ```
 ### Execute a Command at Boot
 ```sh
+# Put your cmd in this file
 /etc/rc.local
 ```
 ### Show Running Processes
