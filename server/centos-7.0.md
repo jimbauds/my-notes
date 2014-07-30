@@ -62,6 +62,7 @@ sudo yum update
 ### EPEL Repos Installtion
 ```sh
 curl -O http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
+sudo rpm -ivh epel-release-7-0.2.noarch.rpm
 ```
 ## Firewall Installation/Configuration (Iptables)
 ### Check if iptables is installed
