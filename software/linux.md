@@ -1,6 +1,6 @@
 # Linux Commands
 
-## Show CPU Info
+### Show CPU Info
 ```sh
 cat /proc/cpuinfo
 ```
