@@ -105,12 +105,6 @@ service iptables save
 service ip6tables save
 ```
 
-### Add EPEL Repos
-```sh
-curl -O http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
-sudo rpm -ivh epel-release-7-0.2.noarch.rpm
-```
-
 ## Log files
 ### Default location
 ```sh
