@@ -30,8 +30,8 @@ sudo yum search <package_name>
 ```
 ### Execute a Command at Boot
 ```sh
-# Put your cmd in this file
-/etc/rc.local
+# Debian
+/etc/rc.local #=> Put your cmd in this file
 ```
 ### Show Running Processes
 ```sh
