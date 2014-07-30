@@ -1,5 +1,10 @@
 # Linux Commands
 
+## Show CPU Info
+```sh
+cat /proc/cpuinfo
+```
+
 ## Kernel Upgrade (official)
 ```sh
 # Show kernel version
