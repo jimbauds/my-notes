@@ -49,6 +49,11 @@ ps auxf
 # Red Hat
 sudo yum grouplist
 ```
+### Change Hostname
+```sh
+sudo vi /etc/sysconfig/network
+  HOSTNAME=<new_hostname>
+```
 ### Add EPEL Repos
 ```sh
 curl -O http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
