@@ -124,7 +124,7 @@ ip6tables -P INPUT DROP
 ip6tables -P OUTPUT DROP
 ip6tables -P FORWARD DROP
 ```
-### Save permantly the rules
+### Save permanently the rules
 ```sh
 service iptables save
 service ip6tables save
