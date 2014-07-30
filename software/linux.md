@@ -48,6 +48,8 @@ sudo yum grouplist
 ```sh
 curl -O http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
 sudo rpm -ivh epel-release-7-0.2.noarch.rpm
+yum --enablerepo=epel info zabbix
+yum --enablerepo=epel install zabbix
 ```
 ## Network
 ### Get HTTP Server Headers
