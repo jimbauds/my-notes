@@ -16,7 +16,7 @@ visudo
   - <username> ALL=(ALL:ALL) ALL
 
 # Edit the ssh config file
-nano /etc/ssh/sshd_config
+vi /etc/ssh/sshd_config
 
 # Change port number
   - Port <port_number>
