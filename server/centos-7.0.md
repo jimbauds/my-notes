@@ -53,17 +53,41 @@ sudo yum update #=> This should work!
 ```sh
 # Check if iptables is installed
 sudo iptables -V
+sudo rpm -q iptables
 
-# If not, install with this command
+# Check if iptables is running
+sudo lsmod | grep ip_tables
+
+# Enable iptables
+sudo system-config-securitylevel
+
+# You can install iptables with this command
 sudo yum install iptables
 
 # Check current rules
 sudo iptables -L -n
 
-# Flush current firewall rules
+# Temporary ACCEPT all connection to not lock yourself out from the server (SSH)
+sudo iptables -P INPUT ACCEPT
+
+# Now, you can flush the current firewall rules
 sudo iptables -F
 
+# Accept localhost connection
+sudo iptables -A INPUT -i lo -j ACCEPT
 
+# Accept established connections
+sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Add yourself for SSH connection
+sudo iptables -A INPUT -p tcp -s <your_ip> --dport <ssh_port> -j ACCEPT
+
+# Drop ALL OTHERs INPUT/FORWARD connections
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+
+# Accept all OUTPUT connections
+iptables -P OUTPUT ACCEPT
 ```
 
 ## Storing iptables rules in a file
