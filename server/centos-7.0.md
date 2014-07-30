@@ -40,10 +40,12 @@ PasswordAuthentication no
 ```sh
 # Create a new directory under the new user home folder, for storing is key.
 mkdir /home/<username>/.ssh
+chmod 700 /home/<username>/.ssh
 
 # Store the user public key under authorized_keys
 vi /home/<username>/.ssh/authorized_keys
 # Put the public key and save the file
+chmod 600 authorized_keys
 ```
 ### Restart the SSH service
 ```sh
