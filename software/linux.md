@@ -1,41 +1,30 @@
 # Linux Commands
-
+## Basic Commands
 ### Show CPU Info
 ```sh
 cat /proc/cpuinfo
 ```
-### Show kernel version
+### Show Kernel Version
 ```sh
 uname -r
 ```
-## Kernel Upgrade (official)
+### Shutdown VPS
 ```sh
-# Show available kernel images
-apt-cache search linux-image
-
-# Install kernel
-sudo apt-get install linux-image-x.x.x-xx
+sudo shutdown -h now
 ```
-
-## Kernel Upgrade (not-official)
+### Make Symbolic Link
 ```sh
-# Add Debian backports
-sudo vim /etc/apt/sources.list
-  deb http://http.debian.net/debian wheezy-backports main
-  
-
-```
-
-### Basic Commands
-```shell
 ln -s /path/to/file /path/to/symlink #=> make symbolic link
+```
+### Search Package
+```sh
+# Debian
 sudo apt-cache search <package_name>
 
-# Shutdown VPS
-sudo shutdown –h now
+# Red Hat
+sudo yum search <package_name>
 ```
 
-### Debian
 ```shell
 netstat -an | grep ESTABLISHED #=> Show established internet connections
 netstat -natp
@@ -85,4 +74,18 @@ fusermount -u <local_mount_point>
 # If you would like to automatically mount over ssh upon boot, set up passwordless ssh login, and append the following in /etc/fstab.
 sudo vi /etc/fstab
 sshfs#my_user@remote_host:/path/to/directory <local_mount_point> fuse user 0 0
+```
+## Kernel Upgrade (official)
+```sh
+# Show available kernel images
+apt-cache search linux-image
+
+# Install kernel
+sudo apt-get install linux-image-x.x.x-xx
+```
+## Kernel Upgrade (not-official)
+```sh
+# Add Debian backports
+sudo vim /etc/apt/sources.list
+  deb http://http.debian.net/debian wheezy-backports main
 ```
