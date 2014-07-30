@@ -20,7 +20,7 @@ visudo
 # Add the following
 <username> ALL=(ALL) ALL
 ```
-### Edit the ssh config file
+### Edit the SSH config file
 ```sh
 vi /etc/ssh/sshd_config
 
