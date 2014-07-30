@@ -8,8 +8,15 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8
 apt-get update
 apt-get install lxc-docker
 
-# CentOS 7
+# CentOS 7 (official)
 sudo yum install docker
+sudo service docker start
+sudo chkconfig docker on
+
+# CentOS 7 (EPEL Repos)
+curl -O http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
+sudo rpm -ivh epel-release-7-0.2.noarch.rpm
+sudo yum install docker-io
 sudo service docker start
 sudo chkconfig docker on
 
