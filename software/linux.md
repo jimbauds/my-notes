@@ -1,5 +1,5 @@
 # Linux Commands
-## Basic Commands
+## General Commands
 ### Show CPU Info
 ```sh
 cat /proc/cpuinfo
