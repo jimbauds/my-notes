@@ -49,38 +49,21 @@ service sshd restart
 ssh -p <port_number> <username>@<server>
 sudo yum update #=> This should work!
 ```
-# Firewall Installation (Iptables)
+# Firewall Installation/Configuration (Iptables)
 ```sh
-sudo apt-get install iptables
+# Check if iptables is installed
+sudo iptables -V
+
+# If not, install with this command
+sudo yum install iptables
+
+# Check current rules
+sudo iptables -L -n
 
 # Flush current firewall rules
 sudo iptables -F
 
-# Block null packets
-sudo iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
 
-# Reject syn-flood attack
-sudo iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
-
-# Reject XMAS packets
-sudo iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
-
-# Allow localhost connection
-sudo iptables -A INPUT -i lo -j ACCEPT
-
-# Allow outgoing connections
-sudo iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-
-# Allow web server traffic
-sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
-sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
-
-# Allow SSH connection from an IP Address
-sudo iptables -A INPUT -p tcp -s YOUR_IP_ADDRESS -m tcp --dport 22 -j ACCEPT
-
-# Block everything else, Allow all outgoing connections
-sudo iptables -P OUTPUT ACCEPT
-sudo iptables -P INPUT DROP
 ```
 
 ## Storing iptables rules in a file
@@ -153,3 +136,34 @@ sudo nano /etc/rsyslog.d/my_iptables.conf
 
 :msg,contains,"iptables denied: " /var/log/iptables.log
 ```
+
+
+## To classified
+```sh
+# Block null packets
+sudo iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
+
+# Reject syn-flood attack
+sudo iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
+
+# Reject XMAS packets
+sudo iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
+
+# Allow localhost connection
+sudo iptables -A INPUT -i lo -j ACCEPT
+
+# Allow outgoing connections
+sudo iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Allow web server traffic
+sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+
+# Allow SSH connection from an IP Address
+sudo iptables -A INPUT -p tcp -s YOUR_IP_ADDRESS -m tcp --dport 22 -j ACCEPT
+
+# Block everything else, Allow all outgoing connections
+sudo iptables -P OUTPUT ACCEPT
+sudo iptables -P INPUT DROP
+```
+
