@@ -9,7 +9,7 @@ ssh root@<server>
 ```sh
 passwd
 ```
-### Add new user for ssh access
+### Add new user for SSH access
 ```sh
 adduser <username>
 ```
