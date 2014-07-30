@@ -56,6 +56,22 @@ sudo rpm -ivh epel-release-7-0.2.noarch.rpm
 yum --enablerepo=epel info zabbix
 yum --enablerepo=epel install zabbix
 ```
+### Show login history of users
+```sh
+sudo last
+```
+### Show who is logged in
+```sh
+sudo who
+```
+### Find out when was the system last rebooted
+```sh
+sudo last reboot
+```
+### See when did someone last log in to the system
+```sh
+sudo lastlog
+```
 ## Network
 ### Get HTTP Server Headers
 ```sh
