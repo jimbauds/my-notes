@@ -55,11 +55,17 @@ sudo yum update #=> This should work!
 sudo iptables -V
 sudo rpm -q iptables
 
+# Enable iptables and ip6tables
+yum install iptables-services
+systemctl mask firewalld.service
+systemctl enable iptables.service
+systemctl enable ip6tables.service
+
 # Check if iptables is running
 sudo lsmod | grep ip_tables
 
 # Enable iptables
-sudo system-config-securitylevel
+# sudo system-config-securitylevel
 
 # You can install iptables with this command
 sudo yum install iptables
@@ -88,6 +94,13 @@ iptables -P FORWARD DROP
 
 # Accept all OUTPUT connections
 iptables -P OUTPUT ACCEPT
+
+ip6tables -P INPUT DROP
+ip6tables -P OUTPUT DROP
+ip6tables -P FORWARD DROP
+
+service iptables save
+service ip6tables save
 ```
 
 ## Storing iptables rules in a file
