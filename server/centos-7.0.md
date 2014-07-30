@@ -18,7 +18,7 @@ adduser <username>
 # Execute
 visudo
 # Add the following
-<username> ALL=(ALL:ALL) ALL
+<username> ALL=(ALL) ALL
 ```
 ### Edit the ssh config file
 ```sh
