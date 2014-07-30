@@ -74,6 +74,7 @@ sudo rpm -q iptables
 ```
 
 ### Enable iptables and ip6tables and Mask firewalld
+I prefer to use iptables for now.
 ```sh
 sudo yum install iptables-services
 sudo systemctl mask firewalld.service
