@@ -44,6 +44,11 @@ ps auxf
 # Red Hat
 sudo yum grouplist
 ```
+### Add EPEL Repos
+```sh
+curl -O http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
+sudo rpm -ivh epel-release-7-0.2.noarch.rpm
+```
 ## Network
 ### Get HTTP Server Headers
 ```sh
