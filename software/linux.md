@@ -4,12 +4,12 @@
 ```sh
 cat /proc/cpuinfo
 ```
-
+### Show kernel version
+```sh
+uname -r
+```
 ## Kernel Upgrade (official)
 ```sh
-# Show kernel version
-uname -r
-
 # Show available kernel images
 apt-cache search linux-image
 
