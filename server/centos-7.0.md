@@ -45,7 +45,7 @@ mkdir /home/<username>/.ssh
 vi /home/<username>/.ssh/authorized_keys
 # Put the public key and save the file
 ```
-### Restart the ssh service
+### Restart the SSH service
 ```sh
 service sshd restart
 ```
