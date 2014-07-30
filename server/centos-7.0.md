@@ -169,5 +169,23 @@ sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 # Block everything else, Allow all outgoing connections
 sudo iptables -P OUTPUT ACCEPT
 sudo iptables -P INPUT DROP
+
+Protocol 2
+Port 22
+UsePrivilegeSeparation yes
+SyslogFacility AUTH
+LogLevel INFO
+PermitRootLogin no
+StrictModes yes
+LoginGraceTime 30
+RSAAuthentication yes
+PasswordAuthentication no
+PubkeyAuthentication yes
+AllowTcpForwarding no
+X11Forwarding no
+PrintLastLog yes
+KeepAlive yes
+UsePAM no
+Subsystem sftp /usr/libexec/openssh/sftp-server
 ```
 
