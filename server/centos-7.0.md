@@ -1,44 +1,52 @@
 # CentOS 7.0 x64
 
 ## Initial Server Configuration
+### Connect to the server
 ```sh
-# Connect to the server
 ssh root@<server>
-
-# Change root password
+```
+### Change root password
+```sh
 passwd
-
-# Add new user for ssh access
+```
+### Add new user for ssh access
+```sh
 adduser <username>
-
-# Give new user sudo right
+```
+### Give new user sudo right
+```sh
+# Execute
 visudo
-  - <username> ALL=(ALL:ALL) ALL
-
-# Edit the ssh config file
+# Add the following
+<username> ALL=(ALL:ALL) ALL
+```
+### Edit the ssh config file
+```sh
 vi /etc/ssh/sshd_config
 
 # Change port number
-  - Port <port_number>
+Port <port_number>
 
 # Remove the root login
-  - PermitRootLogin no
+PermitRootLogin no
 
 # Add a the new user access
-  - AllowUsers <username>
+AllowUsers <username>
 
 # Remove password authentication (only authorized keys are accepted)
-  - PasswordAuthentication no
-
-# Create a new directory under the new user home folder,
-# for storing is key.
+PasswordAuthentication no
+```
+### New User Access
+```sh
+# Create a new directory under the new user home folder, for storing is key.
 mkdir /home/<username>/.ssh
 
 # Store the user public key under authorized_keys
 vi /home/<username>/.ssh/authorized_keys
-  - put your public key and save the file
-
-# Restart the ssh service
+# Put the public key and save the file
+```
+### Restart the ssh service
+```sh
 service sshd restart
 ```
 
@@ -47,43 +55,52 @@ service sshd restart
 ```sh
 # Open a new terminal
 ssh -p <port_number> <username>@<server>
-sudo yum update #=> This should work!
+# This should work!
+sudo yum update
 ```
+## Repos
 ### EPEL Repos Installtion
 ```sh
 curl -O http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
 ```
-
-
 ## Firewall Installation/Configuration (Iptables)
+### Check if iptables is installed
 ```sh
-# Check if iptables is installed
 sudo iptables -V
 sudo rpm -q iptables
+```
 
-# Enable iptables and ip6tables
-yum install iptables-services
-systemctl mask firewalld.service
-systemctl enable iptables.service
-systemctl enable ip6tables.service
-
-# Check if iptables is running
+### Enable iptables and ip6tables and Mask firewalld
+```sh
+sudo yum install iptables-services
+sudo systemctl mask firewalld.service
+sudo systemctl enable iptables.service
+sudo systemctl enable ip6tables.service
+```
+### Check if iptables is running
+```sh
 sudo lsmod | grep ip_tables
-
-# Enable iptables
-# sudo system-config-securitylevel
-
-# You can install iptables with this command
-sudo yum install iptables
-
-# Check current rules
+```
+### Check current rules
+```sh
 sudo iptables -L -n
-
-# Temporary ACCEPT all connection to not lock yourself out from the server (SSH)
+```
+### Iptables Configuration
+```sh
+# Temporary ACCEPT ALL connections to not lock yourself out from the server (SSH)
 sudo iptables -P INPUT ACCEPT
 
-# Now, you can flush the current firewall rules
+# Now, you can FLUSH the current firewall rules
 sudo iptables -F
+
+# Block null packets
+sudo iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
+
+# Reject syn-flood attack
+sudo iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
+
+# Reject XMAS packets
+sudo iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
 
 # Accept localhost connection
 sudo iptables -A INPUT -i lo -j ACCEPT
@@ -94,7 +111,7 @@ sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 # Add yourself for SSH connection
 sudo iptables -A INPUT -p tcp -s <your_ip> --dport <ssh_port> -j ACCEPT
 
-# Drop ALL OTHERs INPUT/FORWARD connections
+# DROP ALL others INPUT/FORWARD connections
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
 
@@ -105,12 +122,12 @@ iptables -P OUTPUT ACCEPT
 ip6tables -P INPUT DROP
 ip6tables -P OUTPUT DROP
 ip6tables -P FORWARD DROP
-
-# Save permantly the rules
+```
+### Save permantly the rules
+```sh
 service iptables save
 service ip6tables save
 ```
-
 ## Log files
 ### Default location
 ```sh
@@ -119,11 +136,9 @@ service ip6tables save
 ```
 ### Dispatch log using rsyslog
 ```sh
-sudo nano /etc/rsyslog.d/my_iptables.conf
-
-:msg,contains,"iptables denied: " /var/log/iptables.log
+sudo vi /etc/rsyslog.d/my_iptables.conf
+  :msg,contains,"iptables denied: " /var/log/iptables.log
 ```
-
 ## Docker Installation
 ### From EPEL Repos
 ```sh
@@ -142,27 +157,9 @@ sudo yum install docker
 ```
 ## To classified
 ```sh
-# Block null packets
-sudo iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
-
-# Reject syn-flood attack
-sudo iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
-
-# Reject XMAS packets
-sudo iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
-
-# Allow localhost connection
-sudo iptables -A INPUT -i lo -j ACCEPT
-
-# Allow outgoing connections
-sudo iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-
 # Allow web server traffic
 sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
-
-# Allow SSH connection from an IP Address
-sudo iptables -A INPUT -p tcp -s YOUR_IP_ADDRESS -m tcp --dport 22 -j ACCEPT
 
 # Block everything else, Allow all outgoing connections
 sudo iptables -P OUTPUT ACCEPT
