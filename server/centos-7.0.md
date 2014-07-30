@@ -112,6 +112,9 @@ sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 # Add yourself for SSH connection
 sudo iptables -A INPUT -p tcp -s <your_ip> --dport <ssh_port> -j ACCEPT
 
+# log iptables denied calls (access via 'dmesg' command)
+-A INPUT -m limit --limit 5/min -j LOG --log-prefix "iptables denied: " --log-level 7
+
 # DROP ALL others INPUT/FORWARD connections
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
