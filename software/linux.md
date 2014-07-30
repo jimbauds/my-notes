@@ -30,6 +30,11 @@ sudo apt-cache search <package_name>
 # Red Hat
 sudo yum search <package_name>
 ```
+### Show Package Information
+```sh
+sudo yum info <package_name>
+sudo yum --enablerepo=epel info <package_name>
+```
 ### Execute a Command at Boot
 ```sh
 # Debian
