@@ -49,7 +49,13 @@ service sshd restart
 ssh -p <port_number> <username>@<server>
 sudo yum update #=> This should work!
 ```
-# Firewall Installation/Configuration (Iptables)
+### EPEL Repos Installtion
+```sh
+curl -O http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
+```
+
+
+## Firewall Installation/Configuration (Iptables)
 ```sh
 # Check if iptables is installed
 sudo iptables -V
@@ -118,7 +124,22 @@ sudo nano /etc/rsyslog.d/my_iptables.conf
 :msg,contains,"iptables denied: " /var/log/iptables.log
 ```
 
+## Docker Installation
+### From EPEL Repos
+```sh
+# Check Version
+sudo yum info docker-io
+# Install
+sudo yum install docker-io
+```
+### From CentOS 7 Extra Repos
+```sh
+# Check Version
+sudo yun info docker
 
+# Install
+sudo yum install docker
+```
 ## To classified
 ```sh
 # Block null packets
