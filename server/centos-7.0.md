@@ -133,7 +133,6 @@ service ip6tables save
 ### Default location
 ```sh
 /var/log/ 
-/var/log/kern.log
 ```
 ### Dispatch log using rsyslog
 ```sh
