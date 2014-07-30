@@ -7,7 +7,7 @@ Those are my notes! Happy Reading!
 P.S. Sorry if sometimes you don't understand them. I rewrite my notes when I have
 time and put comments on it. But, you have to understand that this is for me.
 
-## On => Building servers:
+## Building servers:
 In this part, you can find my notes on building servers. I build servers
 for my development needs.
 * [CentOS 7.0](server/centos-7.0.md)  
@@ -15,7 +15,7 @@ for my development needs.
 * [Debian 7.5 Wheezy](server/debian-7.5.md)  
   This is the notes I use to put up a new Debian server. SSH must already be up.
 
-## On => Softwares:
+## Softwares:
 Here is a list of notes I take on various software. Those are usually terminal
 software.
 * [Linux](software/linux.md)  
@@ -34,7 +34,7 @@ software.
 * [Rails](software/rails.md)  
   From the [rubyonrails.org](http://rubyonrails.org) website, Ruby on Rails is an open-source web framework that's optimized for programmer happiness and sustainable productivity. I use Rails to develop web app.
 
-## On => Installation from source (Debian):
+## Installation from source (Debian):
 In this section of the document, you're going to find my notes on Software Installation from source generally under Linux.
 * [git-2.0.0 with documentation](installation/from_source/git-2.0.0_with_doc.md)  
   This file is going to show you the commands I use to install git-2.0.0 on my dev-box. I do not install documentation on my servers where I install Git too.
