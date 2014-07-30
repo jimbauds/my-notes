@@ -53,6 +53,9 @@ sudo yum grouplist
 ```sh
 sudo vi /etc/sysconfig/network
   HOSTNAME=<new_hostname>
+  
+# You can apply the new hostname without reboot
+sudo hostname <new_hostname>
 ```
 ### Add EPEL Repos
 ```sh
