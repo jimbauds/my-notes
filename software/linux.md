@@ -13,6 +13,7 @@ uname -r
 lsb_release -a #=> Show OS Version
 cat /proc/version
 cat /etc/issue
+cat /etc/os-release
 ```
 ### Shutdown VPS
 ```sh
