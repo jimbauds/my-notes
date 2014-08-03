@@ -42,6 +42,8 @@ software.
   From the [Wikipedia](http://en.wikipedia.org/wiki/RubyGems) website, A gem is a package that provides a standard format for distributing Ruby programs and libraries (in a self-contained format). RubyGems is the package manager for gems.
 * [Rails](software/rails.md)  
   From the [rubyonrails.org](http://rubyonrails.org) website, Ruby on Rails is an open-source web framework that's optimized for programmer happiness and sustainable productivity. I use Rails to develop web app.
+* [Vim](software/vim.md)  
+* This is my Vim notes. I use Vim as my text editor. 
 
 ## Installation from source (Debian):
 In this section of the document, you're going to find my notes on Software Installation from source generally under Linux.
