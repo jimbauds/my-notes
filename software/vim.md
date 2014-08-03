@@ -9,6 +9,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+" Only if my terminal windows are dark themed.
 set background=dark
 " Show information about the current command
 set showcmd
