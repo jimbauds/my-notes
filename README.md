@@ -11,7 +11,7 @@ time and put comments on it. But, you have to understand that this is for me.
 In this part, you can find my notes on building servers. I build servers
 for my development needs.
 * [CoreOS](server/coreos.md)  
-  I just discover CoreOS. Amazing!
+  I use CoreOS for cluster compute.
 * [CentOS 7.0](server/centos-7.0.md)  
   This is the notes I use to put up a new CentOS server. SSH must already be up.
 * [Debian 7.5 Wheezy](server/debian-7.5.md)  
