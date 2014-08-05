@@ -21,7 +21,7 @@ for my development needs.
 This is my notes for different Platform as a Service. I used them for building apps
 from time to time.
 * [Google App Engine](platform/app-engine.md)  
-  This my Google App Engine notes.
+  I use Google App Engine to learn Go and the Google Infrastructure. 
   
 
 ## Softwares:
