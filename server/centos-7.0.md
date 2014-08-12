@@ -123,7 +123,7 @@ sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 sudo iptables -A INPUT -p tcp -s <your_ip> --dport <ssh_port> -j ACCEPT
 
 # log iptables denied calls (access via 'dmesg' command)
--A INPUT -m limit --limit 5/min -j LOG --log-prefix "iptables denied: " --log-level 7
+iptables -A INPUT -m limit --limit 5/min -j LOG --log-prefix "iptables denied: " --log-level 7
 
 # DROP ALL others INPUT/FORWARD connections
 iptables -P INPUT DROP
@@ -139,6 +139,7 @@ ip6tables -P FORWARD DROP
 ```
 ### Save permanently the rules
 ```sh
+yum install policycoreutils
 service iptables save
 service ip6tables save
 ```
