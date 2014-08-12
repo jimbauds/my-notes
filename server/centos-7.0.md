@@ -12,7 +12,14 @@ passwd
 ### Add new user for SSH access
 ```sh
 adduser <username>
+passwd <username>
 ```
+
+### Install sudo (not install by  default)
+```sh
+yum install sudo
+```
+
 ### Give new user sudo right
 ```sh
 # Execute
