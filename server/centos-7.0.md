@@ -164,6 +164,8 @@ sudo yum install docker-io
 sudo service docker start
 # Enable on Boot
 sudo systemctl enable docker.service
+# Add yourself to docker group
+sudo usermod -a -G docker $USER
 ```
 ### From CentOS 7 Extra Repos
 ```sh
