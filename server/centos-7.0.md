@@ -160,6 +160,10 @@ sudo vi /etc/rsyslog.d/my_iptables.conf
 sudo yum info docker-io
 # Install
 sudo yum install docker-io
+# Start
+sudo service docker start
+# Enable on Boot
+sudo systemctl enable docker.service
 ```
 ### From CentOS 7 Extra Repos
 ```sh
