@@ -56,7 +56,7 @@ vi /home/<username>/.ssh/authorized_keys
 ```
 ### Restart the SSH service
 ```sh
-service sshd restart
+systemctl restart sshd.service
 ```
 
 ### **IMPORTANT**
