@@ -202,5 +202,8 @@ PrintLastLog yes
 KeepAlive yes
 UsePAM no
 Subsystem sftp /usr/libexec/openssh/sftp-server
+
+iptables -A INPUT -i eth0 -p icmp --source IP.250 -j ACCEPT
+
 ```
 
