@@ -94,7 +94,7 @@ sudo lsmod | grep ip_tables
 ```
 ### Check current rules
 ```sh
-sudo iptables -L -n
+iptables -L -n --line-numbers
 ```
 ### Iptables Configuration
 ```sh
