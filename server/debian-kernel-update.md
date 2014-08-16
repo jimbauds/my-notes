@@ -17,4 +17,5 @@ make-kpkg clean
 fakeroot make-kpkg --append-to-version "-rockon" --revision "1" --initrd kernel_image kernel_headers
 dpkg -i linux-image-3.16.0-rockon_1_amd64.deb
 dpkg -i linux-headers-3.16.0-rockon_1_amd64.deb
+reboot
 ```
