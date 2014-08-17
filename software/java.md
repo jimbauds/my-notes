@@ -14,10 +14,6 @@ apt-get install wget
 
 # Download JRE 7
 
-
-# Rename the file
-mv jre-7u67-linux-x64.tar.gz?AuthParam=1408244145_290535ed0dc3d2356f0b7e7de3c94c19 jre.tar.gz
-
 # Create runtime directory
 mkdir -p /usr/lib/jvm
 
