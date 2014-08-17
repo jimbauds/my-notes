@@ -150,7 +150,18 @@ sudo nano /etc/rsyslog.d/my_iptables.conf
 
 :msg,contains,"iptables denied: " /var/log/iptables.log
 ```
+## Debian 7 (Wheezy) Default /etc/apt/sources.list
+```sh
+deb http://http.debian.net/debian wheezy main
+deb-src http://http.debian.net/debian wheezy main
 
+deb http://http.debian.net/debian wheezy-updates main
+deb-src http://http.debian.net/debian wheezy-updates main
+
+deb http://security.debian.org/ wheezy/updates main
+deb-src http://security.debian.org/ wheezy/updates main
+
+```
 
 
 
