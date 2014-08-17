@@ -24,5 +24,12 @@ mkdir -p /usr/lib/jvm
 # Uncompress
 tar -xzf jre.tar.gz -C /usr/lib/jvm
 
-# 
+# Inform system about the new Java
+update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jre1.7.0_67/bin/java" 1
+
+# Set default
+update-alternatives --set java /usr/lib/jvm/jre1.7.0_67/bin/java
+
+# Test Java
+java -version
 ```
