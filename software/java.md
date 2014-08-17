@@ -1,6 +1,6 @@
 # Java
 
-## Installing Java JRE 7 under Debian 6
+## Installing Java JRE 7 under Debian 6 (Docker)
 ```sh
 # Start a new container
 sudo docker run -it debian:6.0.10 /bin/bash
