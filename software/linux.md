@@ -137,3 +137,7 @@ sudo apt-get install linux-image-x.x.x-xx
 sudo vim /etc/apt/sources.list
   deb http://http.debian.net/debian wheezy-backports main
 ```
+## To classified
+```sh
+head .bash_history #=> Show last commands
+```
