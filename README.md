@@ -18,6 +18,9 @@ for my development needs.
   This is the notes I use to put up a new Debian server. SSH must already be up.  
   [Kernel Update](server/debian-kernel-update.md)
 
+## Infrastructure as a Service (IaaS):  
+  * [Google Cloud Platform](platform/google-cloud.md)
+
 ## Platform as a Service (PaaS):  
 This is my notes for different Platform as a Service. I used them for building apps
 from time to time.
