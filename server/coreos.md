@@ -14,6 +14,14 @@ coreos:
       command: start
     - name: fleet.service
       command: start
+      
+# basic cloud-config.yaml
+coreos:
+  units:
+    - name: etcd.service
+      command: start
+    - name: fleet.service
+      command: start
 ```
 
 ```sh
