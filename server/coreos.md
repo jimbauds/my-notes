@@ -1,6 +1,6 @@
 # CoreOS Notes
 
-```sh
+```yaml
 # basic cloud-config.yaml
 coreos:
   etcd:
