@@ -22,7 +22,7 @@ for my development needs.
   * [Google Cloud Platform](platform/google-cloud.md)
 
 ## Database  
-  * [Cassandra](databse/cassandra.md)
+  * [Cassandra](database/cassandra.md)
 
 ## Platform as a Service (PaaS):  
 This is my notes for different Platform as a Service. I used them for building apps
