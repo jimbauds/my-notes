@@ -13,6 +13,7 @@ apt-get upgrade
 apt-get install wget
 
 # Download JRE 7
+http://java.com/en/download/
 
 # Create runtime directory
 mkdir -p /usr/lib/jvm
