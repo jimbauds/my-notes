@@ -1,6 +1,6 @@
 # Golang
 
-## Vim Golang syntax insallation
+## Vim Golang syntax installation
 ```sh
 # Copy Golang syntax file into Vim folder
 Place $GOROOT/misc/vim/syntax/go.vim in ~/.vim/syntax/
