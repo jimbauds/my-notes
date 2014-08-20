@@ -15,8 +15,8 @@ for my development needs.
 * [CentOS 7.0](server/centos-7.0.md)  
   This is the notes I use to put up a new CentOS server. SSH must already be up.
 * [Debian 7.5 Wheezy](server/debian-7.5.md)  
-  This is the notes I use to put up a new Debian server. SSH must already be up.  
-  [Kernel Update](server/debian-kernel-update.md)
+  [Kernel Update](server/debian-kernel-update.md)  
+  This is the notes I use to put up a new Debian server. SSH must already be up.
 
 ## Infrastructure as a Service (IaaS):  
   * [Google Cloud Platform](platform/google-cloud.md)
