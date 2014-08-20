@@ -1,8 +1,8 @@
 # Golang
 
-## Vim Golang Syntax
+## Vim Golang syntax insallation
 ```sh
-# Vim Golang syntax
+# Copy Golang syntax file into Vim folder
 Place $GOROOT/misc/vim/syntax/go.vim in ~/.vim/syntax/
 # Put the following in ~/.vim/ftdetect/go.vim:
 au BufRead,BufNewFile *.go set filetype=go
