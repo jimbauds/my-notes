@@ -22,6 +22,19 @@ wget http://downloads.datastax.com/community/dsc.tar.gz
 
 # Untar
 tar -xzf dsc.tar.gz
+```
 
-
+## Package Installation Default Folder
+```sh
+/var/lib/cassandra #=> Data directories
+/var/log/cassandra #=> Log directory
+/var/run/cassandra #=> Runtime files
+/usr/share/cassandra #=> Environment settings
+/usr/share/cassandra/lib #=> JAR files
+/usr/bin #=> Binary files
+/usr/sbin
+/etc/cassandra #=> Configuration files
+/etc/init.d #=> Service startup script
+/etc/security/limits.d #=> Cassandra user limits
+/etc/default
 ```
