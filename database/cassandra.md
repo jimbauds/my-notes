@@ -94,8 +94,49 @@ HEAP_NEWSIZE="256M"
 # cassandra/conf/log4j-server.properties
 # log4j.appender.R.File=/var/log/cassandra/system.log
 ```
+## Cassandrsa  Start and Stop
+```sh
+cd cassandra/bin
+cassandra <options>
+# -f
+# start Cassandra in foreground (default is background process)
+# -p <filename>
+# Log process ID in named file; useful to stop Cassandra by PID
+# -v
+# print the version and exit
+# -D <parameter>
+# Pass a startup parameter (see documentation)
+
+# Start a Cassandra instance - foreground
+bin/cassandra -f
+# Start a Cassandra instance - background, with PID
+bin/cassandra -p PID
+# Start a package insall instance
+sudo service cassandra start
+
+# Stop Cassandra
+# Foreground
+ctrl + c
+# Background
+ps ax | grep cassandra
+kill <pid>
+# Package
+sudo service cassandra stop
+```
+
+## Cassandra logs
+```sh
+# System log location set by configuration
+install/conf/log4j-server.properties
+
+# System.log
+# system state log file, duplicates stdout, configurable by logging level
+
+# CommitLog
+# table-specific files used during INSERT and UPDATE operations
 
 
+```
 
 
 
