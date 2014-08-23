@@ -67,12 +67,14 @@ native_transport_port (default: 9042)
 ```sh
 MAX_HEAP_SIZE="value"
 # Maximum recommended in production is currently 8G due to current limitations in Java garbage collection
+# System Memory | Heap Size
+# ------------------------------------
+# < 2GB         | 1/2 of system memory
+# 2GB to 4GB    | 1GB
+# > 4GB         | 1/4 system memory, but not more than 8GB
 
-System Memory | Heap Size
-------------------------------------
-< 2GB         | 1/2 of system memory
-2GB to 4GB    | 1GB
-> 4GB         | 1/4 system memory, but not more than 8GB
+HEAP_NEWSIZE="value"
+# Generally set to 1/4 of MAX_HEAP_SIZE
 ```
 
 
