@@ -1,5 +1,10 @@
 # Apache Cassandra
 
+## Requirements
+  * Java 7 64bits Server Edition
+  * Python 2.5+ (Cassandra Tools)
+  * Cassandra Cluster Manager (CCM)
+
 ## Installation
 ```sh
 # Install Java jre 7u67
