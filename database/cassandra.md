@@ -77,6 +77,24 @@ HEAP_NEWSIZE="value"
 # Generally set to 1/4 of MAX_HEAP_SIZE
 ```
 
+## log4j-server.properties
+```sh
+# Cassandra system.log location
+# Default location: /var/log/cassandra/system.log
+# system.log is numerically renamed as it grows over time
+
+# TRACE > DEBUG > INFO > WARN > ERROR > FATAL
+# Default logging level is INFO
+
+# Configuring log level
+# cassandra/conf/log4j-server.properties
+# log4j.rootLogger=INFO,stdout,R
+
+# Log location settings
+# cassandra/conf/log4j-server.properties
+# log4j.appender.R.File=/var/log/cassandra/system.log
+```
+
 
 
 
