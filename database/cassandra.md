@@ -40,25 +40,25 @@ tar -xzf dsc.tar.gz
 ```
 ## cassandra.yaml
 ```sh
-# cluster_name (default: 'Test Cluster')
+cluster_name (default: 'Test Cluster')
 # All nodes in a cluster must have the same value.
 
-# listen_address (default: localhost)
+listen_address (default: localhost)
 # IP address or hostname other nodes uset to connect to this node
 
-# commitlog_directory (default: /var/lib/cassandra/commitlog)
+commitlog_directory (default: /var/lib/cassandra/commitlog)
 # Best practice to mount on a separate disk in production (unless SSD)
 
-# data_file_directories (default: /var/lib/cassandra/data)
+data_file_directories (default: /var/lib/cassandra/data)
 # Storage directory for data tables (SSTables)
 
-# saved_caches_directory (default: /var/lib/cassandra/saved_caches)
+saved_caches_directory (default: /var/lib/cassandra/saved_caches)
 # Storage directory for key caches and row caches
 
-# rpc_address / rpc_port (default: localhost / 9|60)
+rpc_address / rpc_port (default: localhost / 9|60)
 # listen address / port for Thrift client connections
 
-# native_transport_port (default: 9042)
+native_transport_port (default: 9042)
 # listen address for Native CQL Driver binary protocol
 ```
 
