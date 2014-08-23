@@ -63,8 +63,8 @@ native_transport_port (default: 9042)
 ```
 
 ## cassandra-env.sh
+### JVM Heap Size settings
 ```sh
-# JVM Heap Size settings
 MAX_HEAP_SIZE="value"
 # Maximum recommended in production is currently 8G due to current limitations in Java garbage collection
 
