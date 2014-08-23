@@ -14,6 +14,7 @@ apt-get install wget
 
 # Download JRE 7
 http://java.com/en/download/
+server-jre-7u67-linux-x64.tar.gz
 
 # Create runtime directory
 mkdir -p /usr/lib/jvm
