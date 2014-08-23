@@ -38,3 +38,59 @@ tar -xzf dsc.tar.gz
 /etc/security/limits.d #=> Cassandra user limits
 /etc/default
 ```
+## cassandra.yaml
+```sh
+# cluster_name (default: 'Test Cluster')
+# All nodes in a cluster must have the same value.
+
+# listen_address (default: localhost)
+# IP address or hostname other nodes uset to connect to this node
+
+# commitlog_directory (default: /var/lib/cassandra/commitlog)
+# Best practice to mount on a separate disk in production (unless SSD)
+
+# data_file_directories (default: /var/lib/cassandra/data)
+# Storage directory for data tables (SSTables)
+
+# saved_caches_directory (default: /var/lib/cassandra/saved_caches)
+# Storage directory for key caches and row caches
+
+# rpc_address / rpc_port (default: localhost / 9|60)
+# listen address / port for Thrift client connections
+
+# native_transport_port (default: 9042)
+# listen address for Native CQL Driver binary protocol
+```
+
+## cassandra-env.sh
+```sh
+# JVM Heap Size settings
+# MAX_HEAP_SIZE="value"
+# Maximum recommended in production is currently 8G due to current limitations in Java garbage collection
+
+# System Memory | Heap Size
+# ------------------------------------
+# < 2GB         | 1/2 of system memory
+# 2GB to 4GB    | 1GB
+# > 4GB         | 1/4 system memory, but not more than 8GB
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
