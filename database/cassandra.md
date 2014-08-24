@@ -261,6 +261,35 @@ EXIT        |Terminates cqlsh
 SHOW        |Shows the Cassandra version, host, or data type assumptions
 SOURCE      |Executes a file containing CQL statements
 TRACING     |Enables or disables request tracing
+
+bin/cqlsh
+EXIT;
+
+ccm node2 cqlsh
+
+HELP;
+HELP SELECT;
+
+# SOURCE: load and execute an external CQL file
+cqlsh> HELP SOURCE;
+SOURCE '<file>';
+
+
+# SHOW: display version, host, or session information
+cqlsh>HELP SHOW;
+SHOW VERSION;
+SHOW HOST;
+SHOW SESSION <sessionid>;
+
+# DESCRIBE: display information about a specified CQL artifact
+cqlsh>HELP DESCRIBE;
+DESCRIBE KEYSPACE;
+DESCRIBE KEYSPACE [<keyspacename>];
+DESCRIBE TABLES;
+DESCRIBE TABLE <tablename>;
+DESCRIBE CLUSTER;
+DESCRIBE [FULL] SCHEMA;
+
 ```
 
 
