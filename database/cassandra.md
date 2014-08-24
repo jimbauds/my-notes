@@ -88,23 +88,23 @@ HEAP_NEWSIZE="256M"
 
 # Configuring log level
 # cassandra/conf/log4j-server.properties
-# log4j.rootLogger=INFO,stdout,R
+log4j.rootLogger=INFO,stdout,R
 
 # Log location settings
 # cassandra/conf/log4j-server.properties
-# log4j.appender.R.File=/var/log/cassandra/system.log
+log4j.appender.R.File=/var/log/cassandra/system.log
 ```
 ## Cassandrsa  Start and Stop
 ```sh
 cd cassandra/bin
 cassandra <options>
-# -f
+-f
 # start Cassandra in foreground (default is background process)
-# -p <filename>
+-p <filename>
 # Log process ID in named file; useful to stop Cassandra by PID
-# -v
+-v
 # print the version and exit
-# -D <parameter>
+-D <parameter>
 # Pass a startup parameter (see documentation)
 
 # Start a Cassandra instance - foreground
