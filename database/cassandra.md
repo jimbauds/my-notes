@@ -290,6 +290,24 @@ DESCRIBE TABLE <tablename>;
 DESCRIBE CLUSTER;
 DESCRIBE [FULL] SCHEMA;
 
+
+USE musicdb;
+
+# COPY: copy data to or from a specified table and CSV file
+cqlsh> HELP COPY;
+
+# album.csv
+title,year,performer,genre,tracks
+
+COPY album (title, year, performer, genre, tracks)
+FROM 'album.csv'
+WITH HEADER = true;
+
+SELECT *
+FROM album
+LIMIT 1;
+
+
 ```
 
 
