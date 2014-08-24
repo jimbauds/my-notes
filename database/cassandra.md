@@ -98,14 +98,14 @@ log4j.appender.R.File=/var/log/cassandra/system.log
 ```sh
 cd cassandra/bin
 cassandra <options>
--f
 # start Cassandra in foreground (default is background process)
--p <filename>
+-f
 # Log process ID in named file; useful to stop Cassandra by PID
--v
+-p <filename>
 # print the version and exit
--D <parameter>
+-v
 # Pass a startup parameter (see documentation)
+-D <parameter>
 
 # Start a Cassandra instance - foreground
 bin/cassandra -f
