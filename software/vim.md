@@ -41,6 +41,7 @@ i #=> insert at the cursor location
 a #=> append at the cursor location
 A #=> append at the end of the line
 o #=> Insert a newline
+c #=> Change word
 d [modifier] #=> to delete as follows
   w - entire word
   e - to end of word
