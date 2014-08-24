@@ -87,7 +87,8 @@ exit #=> Exirt from the shell and return to Vim
 :split filename #=> Open new file in split mode
 ctrl+wq #=> Quit current window
 
-
+:!ls #=> List files
+:!<shell command> #=> Execute shell command
 ```
 
 
