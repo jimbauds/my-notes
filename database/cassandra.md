@@ -194,12 +194,73 @@ sudo easy_install six
 
 sudo mkdir -p /usr/local/ant
 sudo tar -xzf apache-ant-1.9.4-bin.tar.gz -C /usr/local/ant
-export ANT_HOME=/usr/local/ant
-export JAVA_HOME=/usr/local/jdk1.7.0_67
+export ANT_HOME=/usr/local/ant/apache-ant-1.9.4/
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_67
 export PATH=${PATH}:${ANT_HOME}/bin
 
+ccm create demo_1node -v 2.0.1 -n 1 -s -d
 
+# CCM Folder
+~/.ccm
 
+ccm create demo_3node -v 2.0.7
+ccm populate -n 2
+ccm node2 show
+ccm add node3 -i 127.0.0.3 -j 7300
+ccm start
+ccm node2 stop
+```
+
+## CQL
+```sh
+# Cassandra Query Language
+# Primary interface to the Cassandra DBMS:cqlsh, DevCenter, native drivers
+# Modeled after Structured Query Language (SQL) for familiarity
+
+# Data definition and manipulation language (DDL and DML)
+CREATE      ALTER       GRANT       REVOKE      DROP        USE
+TABLE       INDEX       USER        TRIGGER     KEYSPACE
+SELECT      INSERT      UPDATE      DELETE      TRUNCATE    BATCH
+
+# Data types
+blob, boolean, decimal, double, float, int, text, varchar
+timestamp, uuid, timeuuid, counter
+set, list, map
+
+# No table joins => Query driven design
+```
+
+## cqlsh
+```sh
+# An interactive, command-line utility for executing CQL statements
+# Interacts with its local Cassandra instance, by default
+# Supports tab completion for commands
+
+# /bin/cqlsh
+cqlsh [options] [host [port]]
+
+-k [keyspace] # open cqlsh to interact with a specified keyspace
+-f [file_name] # execute commands in file_name then exit
+-u [user] -p [password] # authenticate with credentials
+-h # display online help for cqlsh
+
+# cqlsh supports
+# CQL DDL and DML commands for schema definition and data manipulation
+# CQL shell commands to support CQL use
+
+# CQL is a Cassandra capability, not restricted to cqlsh
+# CQL shell commands may only be used with cqlsh
+
+Commands    |Description
+----------------------------------------------------------------------
+CAPTURE     |Captures command output and appends it to a file
+CONSISTENCY |Shows the current consistency level, or given a level, sets it
+COPY        |Imports and exports CSV (comma-separated values) data
+DESCRIBE    |Provides information about a Cassandra cluster or data objects
+EXIT        |Terminates cqlsh
+SHOW        |Shows the Cassandra version, host, or data type assumptions
+SOURCE      |Executes a file containing CQL statements
+TRACING     |Enables or disables request tracing
 ```
 
 
