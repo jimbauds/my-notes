@@ -67,6 +67,7 @@ exit #=> Exirt from the shell and return to Vim
 :b# #=> switch to next buffer
 :bf #=> switch to first buffer
 :bl #=> switch to last buffer
+:bd #=> Destroy current buffer
 
 /soleil #=> search the word "soleil"
 :n #=> go to the next occurence
