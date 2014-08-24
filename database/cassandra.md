@@ -165,12 +165,14 @@ start #=> start all nodes in current cluster
 status #=> display up/down status for each node in specified cluster
 
 # CCM commands
+------------------------------------------------------------------------------
 |create      |add         |populate    |list        |switch      |status
 |remove      |liveset     |clear       |start       |stop        |flush
 |compact     |stress      |updateconf  |updatelog4j |cli         |setdir
 |bulkload    |setlog      |scrub       |show        |remove      |ring
 |flush       |drain       |cleanup     |repair      |scrub       |shuffle
 |stablesplit |decommision |json        |cqlsh       |setdir      |version
+------------------------------------------------------------------------------
 ```
 
 
