@@ -182,6 +182,24 @@ ccm start
 ccm status
 ccm node2 stop
 ccm status
+
+git clone https://github.com/pcmanus/ccm.git
+cd ccm/
+sudo ./setup.py install
+cd ..
+wget https://bootstrap.pypa.io/ez_setup.py
+sudo python ez_setup.py 
+sudo easy_install pyYaml
+sudo easy_install six
+
+sudo mkdir -p /usr/local/ant
+sudo tar -xzf apache-ant-1.9.4-bin.tar.gz -C /usr/local/ant
+export ANT_HOME=/usr/local/ant
+export JAVA_HOME=/usr/local/jdk1.7.0_67
+export PATH=${PATH}:${ANT_HOME}/bin
+
+
+
 ```
 
 
