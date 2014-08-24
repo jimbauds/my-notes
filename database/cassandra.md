@@ -55,7 +55,7 @@ data_file_directories (default: /var/lib/cassandra/data)
 saved_caches_directory (default: /var/lib/cassandra/saved_caches)
 # Storage directory for key caches and row caches
 
-rpc_address / rpc_port (default: localhost / 9|60)
+rpc_address / rpc_port (default: localhost / 9160)
 # listen address / port for Thrift client connections
 
 native_transport_port (default: 9042)
@@ -306,6 +306,37 @@ WITH HEADER = true;
 SELECT *
 FROM album
 LIMIT 1;
+```
+
+## nodetool
+```sh
+# A command-line cluster management utility
+# bin/nodetool
+nodetool -h host -p jmx_port [command] [options]
+
+# commands are issued to a specified host and port number
+# JMX_PORT is configured in cassandra-env.sh
+# default Cassandra JMX port is 7199
+# CCM assigns JMX ports sequentially (7100,7200,etc.)
+
+# Some CCM commands invoke nodetool indirectly
+# Nodetool can also be invoked directly through CCM 1.1+
+
+# nodetool supports over 40 commands, including
+status # display cluster state, load, host ID, and token
+info # display node memory use, disk load, uptime, and similar data
+ring # display node status and cluster ring state
+
+nodetool -h [host] -p [port] status [keyspace]
+U (up), D (down)
+N (normal), L (leaving), J (joining), M (moving)
+
+bin/nodetool -h 127.0.0.1 -p 7100 status
+bin/nodetool -h 127.0.0.1 -p 7100 info
+bin/nodetool -h 127.0.0.1 -p 7100 ring
+
+
+
 
 
 ```
