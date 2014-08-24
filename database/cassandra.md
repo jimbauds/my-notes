@@ -134,8 +134,43 @@ install/conf/log4j-server.properties
 
 # CommitLog
 # table-specific files used during INSERT and UPDATE operations
+```
 
+## Cassandra Cluster Manager (CCM)
+```sh
+# Created and manages multi-node clusters on a local machine
+# Useful for configuring development and test clusters
+# NOT used for configuring production clusters
 
+# Open Source utility
+# Created by Sylvain Lebresne of DataStax
+# Source code is available at https://github.com/pcmanus/ccm
+# Requires Python 2.7+, PyYAML, Ant
+
+# Use CCM
+# CCM may target a cluster or its nodes
+# One cluster is always the current default for cluster commands
+ccm [cluster command] [options]
+# Nodes are automatically named node1, node2, node3, etc...
+ccm [node name] [node command] [options]
+# ccm -help to list all comands
+# ccm [command] -help to list help and options for a specific command
+
+# CCM supports over 40 commands, including
+create #=> create a new cluster using specified Cassandra version
+list #=> display list of local clusters managed by CCM
+populate #=> add n nodes to current empty cluster using default options
+add #=> add node to current cluster
+start #=> start all nodes in current cluster
+status #=> display up/down status for each node in specified cluster
+
+# CCM commands
+|create      |add         |populate    |list        |switch      |status
+|remove      |liveset     |clear       |start       |stop        |flush
+|compact     |stress      |updateconf  |updatelog4j |cli         |setdir
+|bulkload    |setlog      |scrub       |show        |remove      |ring
+|flush       |drain       |cleanup     |repair      |scrub       |shuffle
+|stablesplit |decommision |json        |cqlsh       |setdir      |version
 ```
 
 
