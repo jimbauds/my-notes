@@ -334,11 +334,36 @@ N (normal), L (leaving), J (joining), M (moving)
 bin/nodetool -h 127.0.0.1 -p 7100 status
 bin/nodetool -h 127.0.0.1 -p 7100 info
 bin/nodetool -h 127.0.0.1 -p 7100 ring
+```
+## cassandra-stress
+```sh
+# A command-line benchmark and load-testing utility
+# Performs inserts and reads to a test keyspace to measure performance
+# /tools/bin/cassandra-stress
+
+cassandra-stress [options] [-o [operation name]]
+-o (--operation) #=> INSERT, READ, etc. (default: INSERT)
+-t (--threads) #=> processor threads to use for operation (default 50)
+-k (--keep-going) #=> ignore errors during insert and read
+-n (--num-keys) #=> number of records to insert (default 1 000 000)
+
+# Additional options enable configuration of
+# column number, column size, data cardinality
+# compaction strategy, consistency level
+# replication strategy, replication factor
+
+./cassandra-stress -p 9160 -num-keys 1000000 -keep-going
+# Each line reports for the -i (--progress-interval) period (default 10s)
+# total: total operations since start of test
+# interval_op_rate: number of operations per second this interval
+# interval_key_rate: number of keys/rows written per second this interval
+# latency: average latency in milliseconds for each operation this interval
+# 95th: 95% of the time latency was less than the displayed milliseconds
+# 99.9th: 99.9% of the tome latency was less than the displayed milliseconds
+# elapsed: elapsed seconds since start of test
 
 
-
-
-
+bin/cassandra-stress -t 8 -n 250000 -k
 ```
 
 
