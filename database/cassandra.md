@@ -173,6 +173,15 @@ bulkload    setlog      scrub       show        remove      ring
 flush       drain       cleanup     repair      scrub       shuffle
 stablesplit decommision json        cqlsh       setdir      version
 ------------------------------------------------------------------------------
+
+ccm create cluster1 --cassandra-version 1.2.15
+ccm create cluster2 --cassandra-version 2.0.6
+ccm list
+ccm populate --nodes 3
+ccm start
+ccm status
+ccm node2 stop
+ccm status
 ```
 
 
