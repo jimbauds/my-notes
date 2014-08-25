@@ -75,7 +75,7 @@ exit #=> Exirt from the shell and return to Vim
 :bd #=> Destroy current buffer
 
 /soleil #=> search the word "soleil"
-:n #=> go to the next occurence
+n #=> go to the next occurence
 
 < or > #=> Indent a selected block of code
 
