@@ -19,6 +19,11 @@ cat /etc/os-release
 ```sh
 sudo shutdown -h now
 ```
+### Generate SSH Key
+```sh
+ssh-keygen -t rsa -C "your_email@example.com"
+```
+
 ### Make Symbolic Link
 ```sh
 ln -s /path/to/file /path/to/symlink
