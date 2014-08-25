@@ -6,6 +6,7 @@ sudo apt-get upgrade
 
 # Install Java SE 7u67 server
 
+# Get Cassandra
 wget http://apache.mirror.rafal.ca/cassandra/2.0.9/apache-cassandra-2.0.9-bin.tar.gz
 tar -xzf apache-cassandra-2.0.9-bin.tar.gz
 
