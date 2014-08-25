@@ -1,6 +1,7 @@
 # Apache Cassandra Cluster
 
 ```sh
+# Update System
 sudo apt-get update
 sudo apt-get upgrade
 
