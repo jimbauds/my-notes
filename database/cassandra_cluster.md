@@ -23,6 +23,17 @@ sudo mke2fs -F -F -O ^has_journal -t ext4 -b 4096 -E lazy_itable_init=0 /dev/sdb
 sudo mount /dev/sdb /cassandra_data
 sudo chmod a+w /cassandra_data
 
+# Move Cassandra folder
+cd ~/
+sudo mv apache-cassandra-2.0.9/ /usr/lib/cassandra
+
+
+# Configure conf/cassandra.yaml
+# Configure conf/cassandra-env.sh
+
+# set jna symlink
+sudo ln -s /usr/share/java/jna.jar /usr/lib/cassandra/lib
+
 ```
 
 ## To Classified
