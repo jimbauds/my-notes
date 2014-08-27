@@ -45,5 +45,5 @@ fleetctl destroy hello.service
 fleetctl list-units
 fleetctl list-machines
 
-
+gcutil --project=<project-id> addinstance --image=projects/coreos-cloud/global/images/coreos-stable-367-1-0-v20140724 --persistent_boot_disk --zone=us-central1-a --machine_type=n1-standard-1 --metadata_from_file=user-data:cloud-config.yaml core1 core2 core3
 ```
