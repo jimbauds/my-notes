@@ -142,6 +142,15 @@ sudo apt-get install linux-image-x.x.x-xx
 sudo vim /etc/apt/sources.list
   deb http://http.debian.net/debian wheezy-backports main
 ```
+  
+### ISO to USB Stick
+```sh
+# Get USB Stick place
+sudo ls -l /dev/disk/by-id/*usb*
+cd ~/downloads
+sudo dd if=<isofile> of=/dev/sdb bs=4M; sync
+# 
+```
 ## To classified
 ```sh
 head .bash_history #=> Show last commands
