@@ -155,3 +155,64 @@ sudo dd if=<isofile> of=/dev/sdb bs=4M; sync
 ```sh
 head .bash_history #=> Show last commands
 ```
+
+
+You can download the driver for your video card for Ubuntu 64bit from here. Assuming that you are using Ubuntu 64bit now. If you installed Ubuntu 32 bit, there is 331 version of the same driver for Ubuntu 32bit. Save your driver somewhere where you can easily access it, like your user home directory or inside a newly created nvidia directory in your user home directory.
+
+To be able to install your nvidia driver you have to remove your previous video driver with this code in a terminal window:
+```
+sudo apt-get remove nvidia*
+```
+After you finish with this one, you should also blacklist the nouveau driver by editing this file:
+```
+sudo gedit /etc/modprobe.d/blacklist-nouveau.conf
+```
+…and add these lines at the end:
+```
+    blacklist nouveau
+    blacklist lbm-nouveau
+    options nouveau modeset=0
+    alias nouveau off
+    alias lbm-nouveau off
+```
+If, by any chance, there is no blacklist-nouveau.conf present in /etc/modprobe.d/, you can save your file as blacklist-nouveau.conf when prompted.
+
+And you can also disable the Kernel Nouveau by typing these lines in a terminal window:
+```
+    echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
+```
+and after that
+```
+    update-initramfs -u
+```
+Now you can reboot your computer, and when you get to the login prompt, press Ctrl+Alt+F1 to exit to the terminal console. Login with your username and password.
+
+Go to the directory where you saved your nvidia driver using the command cd in the terminal console. Eg. cd nvidia considering that you are already in your user home directory after you login. You can use command dir to be able to see your exact driver's name.
+
+To stop your display manager or the X server, you can type in the console this code:
+```
+   sudo stop lightdm   or
+
+   sudo lightdm stop
+```
+If you are not using lightdm as your default display manager (DM), replace lightdm with your default display manager, which can be either kdm or gdm or whatever your display manager is.
+
+You should get a message in the terminal console saying --> lightdm stopped/waiting
+```
+Install Linux Headers using
+
+  sudo apt-get install linux-headers-generic
+And now you can finally install the nvidia driver using a code similar to this one:
+
+  sudo sh NVIDIA-Linux-x86_64.....run    (for Ubuntu 64bit)  
+or
+
+  sudo sh NVIDIA-Linux-x86.....run    (for Ubuntu 32bit)
+If you don't type the exact name of the driver, you'll get this message: NVIDIA-Linux... could not be found and you should type again the code for installing the driver.
+
+Nvidia installer automatically installs the driver, and at the end it will ask you whether you want to save your new X configuration. Press Yes. After reboot and getting to your desktop and changing your NVIDIA settings as you please you should open a terminal window and type in this code:
+
+  sudo nvidia-xconfig
+to save your new nvidia configuration in /etc/X11/xorg.conf.
+```
+It can happen that after reboot your system shows a black screen or enters the low graphics mode. To fix this you should exit again to the console terminal, login with your username and password, and use the code provided above sudo nvidia-xconfig and also make use of the following tutorial. It is meant to fix the greeter assuming that they haven't fixed this bug in Ubuntu 14.04.
