@@ -15,4 +15,5 @@ git commit --amend
 ```sh
 git checkout -- <file> # Discard changes for a file
 git reset --hard # Discard all changes on all files. Going back to the last commit before the changes.
+git revert <commitid> # Revert a commit and do a new commit
 ```
