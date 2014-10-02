@@ -8,5 +8,6 @@ scp -r my_project.git user@server:/opt/git #=> Put the Bare Repository to a Serv
 ## How to commit to the last commit
 ```sh
 git add <filename>
+...
 git commit --amend
 ```
