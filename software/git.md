@@ -7,6 +7,7 @@ git diff --staged
 cat .git/HEAD # Show where the head is
 git merge --no-ff <branch_name> # Merge without Fast Forward. 
 git log --oneline --graph # Show log with graph
+git blame <filename>
 ```
 
 ## How to put a Bare Repository to a Remote Server
