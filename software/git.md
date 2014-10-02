@@ -3,6 +3,7 @@
 ## Basic commands
 ```sh
 git log --oneline # Show log on one line
+git diff --staged
 ```
 
 ## How to put a Bare Repository to a Remote Server
