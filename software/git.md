@@ -4,6 +4,7 @@
 ```sh
 git log --oneline # Show log on one line
 git diff --staged
+cat .git/HEAD # Show where the head is
 ```
 
 ## How to put a Bare Repository to a Remote Server
