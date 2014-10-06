@@ -12,6 +12,20 @@ git blame <filename>
 
 ## How to put a Bare Repository to a Remote Server
 ```sh
+# On the server
+$ cd /opt/git
+$ mkdir project.git
+$ cd project.git
+$ git --bare init
+
+# On the client
+$ cd myproject
+$ git init
+$ git add .
+$ git commit -m 'initial commit'
+$ git remote add origin git@gitserver:/opt/git/project.git
+$ git push origin master
+
 git clone --bare my_project my_project.git # Clone the Project into a Bare Repository
 scp -r my_project.git user@server:/opt/git # Put the Bare Repository to a Server
 ```
