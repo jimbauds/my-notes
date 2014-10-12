@@ -16,4 +16,7 @@ rake db:migrate #=> Apply migration
 ```shell
 rake routes
 rails console
+
+# Install Postgres lib
+sudo apt-get install libpq-dev
 ```
