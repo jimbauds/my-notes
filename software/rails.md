@@ -1,19 +1,19 @@
 # Rails Commands
 
 ### Basic Commands
-```shell
+```sh
 rails new <app_name> #=> Generate a new rails application
 rails new <app_name> -T #=> Generate a new rails application without tests
 rails new <app_name> -T --database=postgresql
 ```
 ### Migrations
-```shell
+```sh
 rails generate migration create_movies #=> Create migration create_movies
 rake db:migrate #=> Apply migration
 ```
 
 ### Not classified
-```shell
+```sh
 rake routes
 rails console
 
