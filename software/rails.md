@@ -5,6 +5,7 @@
 rails new <app_name> #=> Generate a new rails application
 rails new <app_name> -T #=> Generate a new rails application without tests
 rails new <app_name> -T --database=postgresql
+rake assets:precompile
 ```
 ### Migrations
 ```sh
