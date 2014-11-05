@@ -14,4 +14,5 @@ end
 
 rails generate cucumber:install capybara
 rails generate cucumber_rails_training_wheels:install
+rake db:test:prepare
 ```
