@@ -11,4 +11,7 @@ group :test do
   gem 'capybara'         # lets Cucumber pretend to be a web browser
   gem 'launchy'          # a useful debugging aid for user stories
 end
+
+rails generate cucumber:install capybara
+rails generate cucumber_rails_training_wheels:install
 ```
