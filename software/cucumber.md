@@ -2,6 +2,7 @@
 
 ## To Classified
 ```sh
+Rails 3
 # add to end of Gemfile
 group :test do
   gem 'cucumber-rails', :require => false
