@@ -1,31 +1,40 @@
 # Rails Commands
 
 ### Installation
+For PostgreSQL you need to install this library for the database connection:
+```sh
+# Linux (Debian)
+sudo apt-get install libpq-dev
+```
 ```sh
 gem install rails       # latest stable
 gem install rails --pre # latest beta
 ```
 
-### Basic Commands
+### New Application
 ```sh
-rails new <app_name> #=> Generate a new rails application
-rails new <app_name> -T #=> Generate a new rails application without tests
+rails new <app_name> # Generate a new rails application
+rails new <app_name> -T # Generate a new rails application without tests
 rails new <app_name> -T --database=postgresql
-rake assets:precompile
+
 ```
-### Migrations
+
+### Commands
 ```sh
-rails generate migration create_movies #=> Create migration create_movies
-rake db:migrate #=> Apply migration
+bin/rake routes
+bin/rake assets:precompile
+
+# Migrations
+
+bin/rake db:migrate # Apply migration
 ```
 
 ### Not classified
 ```sh
-rake routes
+
 rails console
 
-# Install Postgres lib
-sudo apt-get install libpq-dev
+
 
 ADDING OR CHANGING MODEL ATTRIBUTES
 $ rails g migration add_columnname_to_tablename columnname:datatype
