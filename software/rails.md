@@ -1,5 +1,11 @@
 # Rails Commands
 
+### Installation
+```sh
+gem install rails       # latest stable
+gem install rails --pre # latest beta
+```
+
 ### Basic Commands
 ```sh
 rails new <app_name> #=> Generate a new rails application
