@@ -24,6 +24,9 @@ rails new <app_name> -T --database=postgresql
 bin/rake routes
 bin/rake assets:precompile
 
+# Tests
+bin/rails generate rspec:install # Setup a testing environment
+
 # Migrations
 
 bin/rake db:migrate # Apply migration
