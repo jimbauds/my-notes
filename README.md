@@ -7,7 +7,7 @@ Those are my notes! Happy Reading!
 P.S. Sorry if sometimes you don't understand them. I rewrite my notes when I have
 time and put comments on it. But, you have to understand that this is for me.
 
-## Building servers:
+### Building servers:
 In this part, you can find my notes on building servers. I build servers
 for my development needs.
 * [CoreOS](server/coreos.md)  
@@ -18,23 +18,23 @@ for my development needs.
   [Debian 7 Kernel Upgrade](server/debian-kernel-upgrade.md)  
   This is the notes I use to put up a new Debian server. SSH must already be up.
 
-## Infrastructure as a Service (IaaS):  
+### Infrastructure as a Service (IaaS):  
   * [Google Cloud Platform](platform/google-cloud.md)  
 
-## Code  
+### Code  
   * [Golang](code/golang.md)  
 
-## Database  
+### Database  
   * [Cassandra](database/cassandra.md)
 
-## Platform as a Service (PaaS):  
+### Platform as a Service (PaaS):  
 This is my notes for different Platform as a Service. I used them for building apps
 from time to time.
 * [Google App Engine](platform/app-engine.md)  
   I use Google App Engine to learn Go and the Google Infrastructure. 
   
 
-## Softwares:
+### Softwares:
 Here is a list of notes I take on various software. Those are usually terminal
 software.
 * [Linux](software/linux.md)  
@@ -59,7 +59,7 @@ software.
 * [Cucumber](software/cucumber.md)  
   Behavior-Driven Design (BDD)
 
-## Installation from source (Debian):
+### Installation from source (Debian):
 In this section of the document, you're going to find my notes on Software Installation from source generally under Linux.
 * [git-2.0.0 with documentation](installation/from_source/git-2.0.0_with_doc.md)  
   This file is going to show you the commands I use to install git-2.0.0 on my dev-box. I do not install documentation on my servers where I install Git too.
