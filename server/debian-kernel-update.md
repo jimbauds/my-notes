@@ -1,4 +1,15 @@
 # Debian Kernel Update
+
+### Debian Backports Kernel Upgrade
+```sh
+sudo vim /etc/apt/sources.list
+  deb http://ftp.debian.org/debian/ wheezy-backports main non-free contrib
+sudo apt-get update
+sudo apt-get -t wheezy-backports install linux-image-amd64
+sudo reboot
+```
+
+### To Classified
 ```sh
 uname -mrns
 wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.tar.xz
