@@ -18,19 +18,6 @@ for my development needs.
   [Debian 7 Kernel Upgrade](server/debian-kernel-upgrade.md)  
   This is the notes I use to put up a new Debian server. SSH must already be up.
 
-### Infrastructure as a Service (IaaS):  
-  * [Google Cloud Platform](platform/google-cloud.md)  
-
-### Database  
-  * [Cassandra](database/cassandra.md)
-
-### Platform as a Service (PaaS):  
-This is my notes for different Platform as a Service. I used them for building apps
-from time to time.
-* [Google App Engine](platform/app-engine.md)  
-  I use Google App Engine to learn Go and the Google Infrastructure. 
-  
-
 ### Softwares:
 Here is a list of notes I take on various software. Those are usually terminal
 software.
@@ -65,3 +52,15 @@ In this section of the document, you're going to find my notes on Software Insta
   [Node.js](http://nodejs.org/) is required by some software I use. Do not install node.js if you don't need it. An exploit can be found and you're going to have something more to take care of. Updating it! ;)
 * [httpd-2.4.9 from Apache](installation/from_source/apache2.4.md)  
   A short description for httpd can be, a web server. I use httpd from time to time to serve static assets. You can find more about httpd at this address => [httpd.apache.org](http://httpd.apache.org/).
+
+### Infrastructure as a Service (IaaS):  
+  * [Google Cloud Platform](platform/google-cloud.md)  
+
+### Database  
+  * [Cassandra](database/cassandra.md)
+
+### Platform as a Service (PaaS):  
+This is my notes for different Platform as a Service. I used them for building apps
+from time to time.
+* [Google App Engine](platform/app-engine.md)  
+  I use Google App Engine to learn Go and the Google Infrastructure.
