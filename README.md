@@ -14,8 +14,8 @@ for my development needs.
   I use CoreOS for cluster compute.
 * [CentOS 7.0](server/centos-7.0.md)  
   This is the notes I use to put up a new CentOS server. SSH must already be up.
-* [Debian 7.5 Wheezy](server/debian-7.5.md)  
-  [Kernel Update](server/debian-kernel-update.md)  
+* [Debian 7 Wheezy](server/debian-7.5.md)  
+  [Debian 7 Kernel Upgrade](server/debian-kernel-upgrade.md)  
   This is the notes I use to put up a new Debian server. SSH must already be up.
 
 ## Infrastructure as a Service (IaaS):  
