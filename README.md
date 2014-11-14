@@ -1,4 +1,4 @@
-# My notes:
+# my-notes
 When I work on something new, I usually take notes to recall things.
 This is what this project is all about.
 
