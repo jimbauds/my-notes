@@ -1,4 +1,4 @@
-# Debian Kernel Update
+# Debian Kernel Upgrade
 
 ### Upgrade Debian 7.6 to Latest Debian Backports Kernel
 ```sh
