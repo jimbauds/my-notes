@@ -21,9 +21,6 @@ for my development needs.
 ### Infrastructure as a Service (IaaS):  
   * [Google Cloud Platform](platform/google-cloud.md)  
 
-### Code  
-  * [Golang](code/golang.md)  
-
 ### Database  
   * [Cassandra](database/cassandra.md)
 
@@ -58,6 +55,7 @@ software.
   Installing and Working with Java
 * [Cucumber](software/cucumber.md)  
   Behavior-Driven Design (BDD)
+* [Golang](code/golang.md) 
 
 ### Installation from source (Debian):
 In this section of the document, you're going to find my notes on Software Installation from source generally under Linux.
