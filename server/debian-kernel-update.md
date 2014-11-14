@@ -1,6 +1,6 @@
 # Debian Kernel Update
 
-### Upgrade Debian to Latest Debian Backports Kernel
+### Upgrade Debian 7.6 to Latest Debian Backports Kernel
 ```sh
 sudo vim /etc/apt/sources.list
   deb http://ftp.debian.org/debian/ wheezy-backports main non-free contrib
