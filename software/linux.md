@@ -8,6 +8,11 @@ cat /proc/cpuinfo
 ```sh
 uname -r
 ```
+### Set Locale
+```sh
+sudo dpkg-reconfigure locales
+```
+
 ### Show OS Version
 ```sh
 lsb_release -a #=> Show OS Version
