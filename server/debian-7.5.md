@@ -1,4 +1,6 @@
-# Initial Server Configuration
+# Debian 7 Wheezy
+
+### Init
 ```sh
 # Connect to the server
 ssh root@<server>
