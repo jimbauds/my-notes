@@ -4,6 +4,20 @@
 ```sh
 cat /proc/cpuinfo
 ```
+### Format USB Drive
+``` sh
+fdisk /dev/sdd
+o
+w
+fdisk /dev/sdd
+n
+sudo cryptsetup luksFormat /dev/sdd1
+YES
+cryptsetup luksOpen /dev/sdd1 LUKS001
+mkfs.vfat /dev/mapper/LUKS001 -n LUKS001
+cryptsetup luksClose LUKS001
+```
+
 ### Show Kernel Version
 ```sh
 uname -r
