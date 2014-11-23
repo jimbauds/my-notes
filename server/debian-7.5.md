@@ -165,6 +165,14 @@ deb-src http://security.debian.org/ wheezy/updates main
 
 ```
 
+### Update Hostname
+```sh
+sudo nano /etc/hostname
+  # Update hostname
+sudo nano /etc/hosts
+  # Udpate file to correspond to new hostname
+```
+
 
 
 
