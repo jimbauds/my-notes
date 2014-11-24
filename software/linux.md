@@ -17,6 +17,10 @@ cryptsetup luksOpen /dev/sdd1 LUKS001
 mkfs.vfat /dev/mapper/LUKS001 -n LUKS001
 cryptsetup luksClose LUKS001
 ```
+### Remove a user from a group
+```sh
+sudo deluser user group
+```
 
 ### Show Kernel Version
 ```sh
