@@ -171,7 +171,12 @@ deb-src http://security.debian.org/ wheezy/updates main
 sudo nano /etc/hostname
 # Update file to correspond to new hostname
 sudo nano /etc/hosts
+```
 
+### Change Keyboard Map
+```sh
+setxkbmap ca
+# For permanent change add the command to ~./xsessionrc
 ```
 
 
