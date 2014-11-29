@@ -9,6 +9,7 @@ git merge --no-ff <branch_name> # Merge without Fast Forward.
 git log --oneline --graph # Show log with graph
 git blame <filename>
 git shortlog -sn
+git shortlog --since "Jan 11 2010" -sn
 ```
 
 ## How to put a Bare Repository to a Remote Server
