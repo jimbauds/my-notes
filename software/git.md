@@ -8,7 +8,7 @@ cat .git/HEAD # Show where the head is
 git merge --no-ff <branch_name> # Merge without Fast Forward. 
 git log --oneline --graph # Show log with graph
 git blame <filename>
-git shortlog -sn
+git shortlog -sn # Show latest commiter with commit number
 git shortlog --since "Jan 11 2010" -sn
 ```
 
