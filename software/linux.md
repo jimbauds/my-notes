@@ -4,6 +4,11 @@
 ```sh
 cat /proc/cpuinfo
 ```
+### Generate SSL Certificate
+```sh
+openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
+```
+
 ### Format USB Drive
 ``` sh
 fdisk /dev/sdd
