@@ -50,6 +50,7 @@ sudo shutdown -h now
 ### Generate SSH Key
 ```sh
 ssh-keygen -t rsa -C "your_email@example.com"
+ssh-keygen -t rsa -f temp.key
 ```
 
 ### Make Symbolic Link
