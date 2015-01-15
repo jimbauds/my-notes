@@ -25,7 +25,7 @@ $ cd myproject
 $ git init
 $ git add .
 $ git commit -m 'initial commit'
-$ git remote add origin ssh://git@gitserver:<port_number>/opt/git/project.git
+$ git remote add origin git@<git_server>:jimbeaudoin/test2.git
 $ git push origin master
 
 git clone --bare my_project my_project.git # Clone the Project into a Bare Repository
