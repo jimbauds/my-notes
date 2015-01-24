@@ -48,9 +48,10 @@ service ssh restart
 ssh -p <port_number> <username>@<server>
 sudo apt-get update #=> This should work!
 ```
-# Firewall Installation (Iptables)
+# Firewall Configuration (Iptables)
 ```sh
-sudo apt-get install iptables
+# Iptables should be already install on a fresh Debian 7 Install
+# sudo apt-get install iptables
 
 # Flush current firewall rules
 sudo iptables -F
