@@ -80,6 +80,10 @@ sudo iptables -A INPUT -p tcp -s YOUR_IP_ADDRESS -m tcp --dport 22 -j ACCEPT
 # Block everything else, Allow all outgoing connections
 sudo iptables -P OUTPUT ACCEPT
 sudo iptables -P INPUT DROP
+
+# Save the rules permanently
+sudo apt-get install iptables-persistent
+sudo service iptables-persistent start
 ```
 
 ## Storing iptables rules in a file
