@@ -67,7 +67,7 @@ sudo iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
 # Allow localhost connection
 sudo iptables -A INPUT -i lo -j ACCEPT
 
-# Allow outgoing connections
+# Allow established connections
 sudo iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
 # Allow web server traffic (if needed)
