@@ -95,7 +95,7 @@ iptables -P OUTPUT ACCEPT
 sudo apt-get install iptables-persistent
 sudo service iptables-persistent start
 ```
-
+# To Classified
 ## Storing iptables rules in a file
 
 ###Create the file
