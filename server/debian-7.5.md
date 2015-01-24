@@ -13,22 +13,22 @@ adduser <username>
 
 # Give new user sudo right
 visudo
-  - <username> ALL=(ALL:ALL) ALL
+  <username> ALL=(ALL:ALL) ALL
 
 # Edit the ssh config file
 nano /etc/ssh/sshd_config
 
 # Change port number
-  - Port <port_number>
+  Port <port_number>
 
 # Remove the root login
-  - PermitRootLogin no
+  PermitRootLogin no
 
 # Add a the new user access
-  - AllowUsers <username>
+  AllowUsers <username>
 
 # Remove password authentication (only authorized keys are accepted)
-  - PasswordAuthentication no
+  PasswordAuthentication no
 
 # Create a new directory under the new user home folder,
 # for storing is key.
