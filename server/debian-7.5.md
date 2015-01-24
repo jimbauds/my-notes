@@ -75,11 +75,20 @@ sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 
 # Allow SSH connection from an IP Address
-sudo iptables -A INPUT -p tcp -s YOUR_IP_ADDRESS -m tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp -s <your_ip_address> -m tcp --dport <ssh_port> -j ACCEPT
 
-# Block everything else, Allow all outgoing connections
-sudo iptables -P OUTPUT ACCEPT
-sudo iptables -P INPUT DROP
+# DROP ALL others INPUT/FORWARD connections
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+
+# DROP all IPv6 Connections if you don't use IPv6
+ip6tables -P INPUT DROP
+ip6tables -P OUTPUT DROP
+ip6tables -P FORWARD DROP
+
+# Accept all OUTPUT connections
+# OUTPUT connections should be closed and configured carrefully on highly secured systems
+iptables -P OUTPUT ACCEPT
 
 # Save the rules permanently
 sudo apt-get install iptables-persistent
