@@ -70,7 +70,7 @@ sudo iptables -A INPUT -i lo -j ACCEPT
 # Allow outgoing connections
 sudo iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
-# Allow web server traffic
+# Allow web server traffic (if needed)
 sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 
@@ -87,7 +87,7 @@ ip6tables -P OUTPUT DROP
 ip6tables -P FORWARD DROP
 
 # Accept all OUTPUT connections
-# OUTPUT connections should be closed and configured carrefully on highly secured systems
+# OUTPUT connections should be closed and configured carefully on highly secured systems
 iptables -P OUTPUT ACCEPT
 
 # Save the rules permanently
