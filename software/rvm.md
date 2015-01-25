@@ -4,6 +4,7 @@
 ```shell
 rvm get stable #=> Upgrade RVM to the most stable version
 rvm current #=> Show current ruby version
+rvm --default use 2.1.1 #=> Set default version
 rvm gemdir #=> list the full directory path for the current gemset
 
 rvm install 1.9.3 #=> Install ruby version 1.9.3
