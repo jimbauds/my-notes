@@ -50,7 +50,7 @@ sudo apt-get update #=> This should work!
 ```
 #### Firewall Configuration (Iptables)
 ```sh
-# Iptables should be already install on a fresh Debian 7 Install
+# Iptables should be already installed on a fresh Debian 7 Install
 # sudo apt-get install iptables
 
 # Flush current firewall rules
