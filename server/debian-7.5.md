@@ -15,7 +15,7 @@ adduser <username>
 visudo
   <username> ALL=(ALL:ALL) ALL
 
-# Edit the ssh config file
+# Edit the ssh config file (nano or vi/vim - doesn't really matter)
 nano /etc/ssh/sshd_config
 
 # Change port number
