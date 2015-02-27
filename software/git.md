@@ -1,5 +1,12 @@
 # Git Commands
 
+## Latest Version Under Ubuntu
+```sh
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git
+```
+
 ## Basic commands
 ```sh
 git log --oneline # Show log on one line
